@@ -23,6 +23,16 @@ The goal is to make AI work more consistently, traceably, and safely.
   /logs
 ```
 
+```txt
+/issues   = ide mentah / masalah / permintaan fitur
+/prompts  = prompt final yang sudah dirapikan
+/plans    = rencana implementasi fitur
+/tasks    = daftar task kecil yang bisa dikerjakan AI
+/logs     = catatan apa yang sudah dikerjakan
+/context  = aturan global project, arsitektur, naming, flow
+/reviews  = hasil review, bug, improvement
+```
+
 Recommended order:
 
 ```txt
