@@ -42,32 +42,76 @@ Provide a consistent, scalable, and maintainable full stack architecture with cl
 
 ## 🗂 Folder Structure (Recommended)
 
+Generated projects must use separated root folders:
+
+```md
+backend/ # Bun + ElysiaJS API service and backend-only files
+frontend/ # React Router app and frontend-only files
+```
+
+Backend files must be placed inside `backend/`.
+Frontend files must be placed inside `frontend/`.
+Do not generate backend files at the project root unless explicitly requested.
+Do not generate frontend files at the project root unless explicitly requested.
+
 ### Backend
 
 ```md
-src/
-├── routes/ # API routes (ElysiaJS)
-├── lib/ # utilities, db, helpers
-├── schemas/ # drizzle schemas
-├── services/ # business logic layer
-├── middleware/ # custom middleware
-└── types/ # type definitions
+backend/
+└── src/
+    ├── routes/ # API routes (ElysiaJS)
+    ├── lib/ # utilities, db, helpers
+    ├── schemas/ # drizzle schemas
+    ├── services/ # business logic layer
+    ├── middleware/ # custom middleware
+    └── types/ # type definitions
 ```
 
 ### Frontend
 
 ```md
-src/
-├── routes/ # route modules (React Router framework mode)
-├── components/ # reusable UI components
-├── features/ # domain-based modules
-├── hooks/ # custom hooks
-├── lib/ # utilities, helpers
-├── store/ # zustand state (if needed)
-├── schemas/ # zod schemas (if needed)
-├── services/ # API client layer
-└── styles/ # global styles
+frontend/
+└── src/
+    ├── routes/ # route modules (React Router framework mode)
+    ├── components/ # reusable UI components
+    ├── features/ # domain-based modules
+    ├── hooks/ # custom hooks
+    ├── lib/ # utilities, helpers
+    ├── store/ # zustand state (if needed)
+    ├── schemas/ # zod schemas (if needed)
+    ├── services/ # API client layer
+    └── styles/ # global styles
 ```
+
+---
+
+## 🛠 Generation & Setup Rules
+
+When generating a new project, create and initialize both apps in their own folders:
+
+- Create the backend inside `backend/`
+- Create the frontend inside `frontend/`
+- Run backend dependency installation commands inside `backend/`
+- Run frontend dependency installation commands inside `frontend/`
+- Use Bun commands for Bun/ElysiaJS projects
+- Do not only print installation commands unless the user explicitly asks for manual setup
+- If a command cannot be executed, explain the reason clearly and list the exact command the user must run manually
+
+Expected setup flow:
+
+```sh
+mkdir -p backend frontend
+
+cd backend
+bun init -y
+bun add elysia drizzle-orm pg
+bun add -d drizzle-kit @types/pg
+
+cd ../frontend
+bun install
+```
+
+If the frontend is scaffolded with a tool such as React Router, Vite, or another generator, run the scaffold command first, then run package installation in `frontend/`.
 
 ---
 
