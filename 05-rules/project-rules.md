@@ -20,19 +20,23 @@ All AI workflow files must be stored inside the `/ai` directory.
   /logs
   /context
   /reviews
+  /improvements
+  /errors
 ```
 
 ### Folder Description
 
-| Folder        | Purpose                                                                                |
-| ------------- | -------------------------------------------------------------------------------------- |
-| `/ai/issues`  | Store raw ideas, feature requests, problems, or enhancement requests.                  |
-| `/ai/prompts` | Store refined prompts that are ready to be used by AI.                                 |
-| `/ai/plans`   | Store implementation plans before coding starts.                                       |
-| `/ai/tasks`   | Store small actionable task lists based on the plan.                                   |
-| `/ai/logs`    | Store progress logs, completed work, changed files, and notes.                         |
-| `/ai/context` | Store global project context such as tech stack, architecture, conventions, and rules. |
-| `/ai/reviews` | Store review notes, bugs, risks, improvements, and refactor suggestions.               |
+| Folder             | Purpose                                                                                 |
+| ------------------ | --------------------------------------------------------------------------------------- |
+| `/ai/issues`       | Store raw ideas, feature requests, problems, or enhancement requests.                   |
+| `/ai/prompts`      | Store refined prompts that are ready to be used by AI.                                  |
+| `/ai/plans`        | Store implementation plans before coding starts.                                        |
+| `/ai/tasks`        | Store small actionable task lists based on the plan.                                    |
+| `/ai/logs`         | Store progress logs, completed work, changed files, and notes.                          |
+| `/ai/context`      | Store global project context such as tech stack, architecture, conventions, and rules.  |
+| `/ai/reviews`      | Store review notes, bugs, risks, improvements, and refactor suggestions.                |
+| `/ai/improvements` | Store follow-up enhancement ideas, refinements, optimizations, and post-review actions. |
+| `/ai/errors`       | Store error reports, root cause notes, failed cases, and bugfix tracking details.       |
 
 ---
 
