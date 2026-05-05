@@ -13,6 +13,7 @@ All AI workflow files must be stored inside the `/ai` directory.
 
 ```txt
 /ai
+  /raw-ideas
   /issues
   /prompts
   /plans
@@ -28,7 +29,8 @@ All AI workflow files must be stored inside the `/ai` directory.
 
 | Folder             | Purpose                                                                                 |
 | ------------------ | --------------------------------------------------------------------------------------- |
-| `/ai/issues`       | Store raw ideas, feature requests, problems, or enhancement requests.                   |
+| `/ai/raw-ideas`    | Store initial rough ideas, unstructured notes, early problem statements, or draft requests before refinement. |
+| `/ai/issues`       | Store refined issue definitions based on raw ideas, feature requests, problems, or enhancement requests. |
 | `/ai/prompts`      | Store refined prompts that are ready to be used by AI.                                  |
 | `/ai/plans`        | Store implementation plans before coding starts.                                        |
 | `/ai/tasks`        | Store small actionable task lists based on the plan.                                    |
